@@ -16,6 +16,16 @@ public:
     other.data = nullptr;
   }
 
+  MyClass& operator=(MyClass&& other)
+  {
+
+    data = other.data;
+    // Set the other object's data to nullptr.
+    other.data = nullptr;
+    return *this;
+
+  }
+
   ~MyClass() {
     delete data;
   }
