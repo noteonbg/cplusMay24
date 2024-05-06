@@ -1,7 +1,8 @@
-#if 0
+#if 1
 
 //As usual fill up the class. and think what needs to be done...
 
+//move
 MedicalDevice getDeviceByValue() {
     return MedicalDevice(789, "Patient C", "Idle");
 }
@@ -29,7 +30,7 @@ int main() {
 
 
 MedicalDevice& getDeviceByReference() {
-    static MedicalDevice device(123, "Patient A", "Active");
+    static  MedicalDevice device(123, "Patient A", "Active");
     return device;
 }
 

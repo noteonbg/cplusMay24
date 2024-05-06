@@ -9,7 +9,8 @@ private:
 
 public:
     // Static variable for category ID
-    static int CategoryId;   //this variable can be private also..
+       //this variable can be private also..
+    static int CategoryId;
 
     // Constructor
     MedicalDevice(int id, const std::string& name, const std::string& status)
@@ -22,6 +23,8 @@ public:
 
     // Getter for category ID
     static int getCategoryId() {
+
+        
         return CategoryId;
     }
 
@@ -34,7 +37,7 @@ public:
 };
 
 // Initialize the static variable
-int MedicalDevice::CategoryId = 100; // Example value
+int MedicalDevice::CategoryId = 100; // Example value  // defintiion of the static variable of the class.
 
 int main() {
     MedicalDevice myDevice(123, "Patient X", "Active");

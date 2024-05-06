@@ -2,6 +2,7 @@
 #include <string>
 using namespace std;
 
+#if 0
 class MedicalDevice {
 private:
     string deviceName;
@@ -38,8 +39,9 @@ int main()
 
 }
 
+#endif
 
-#if 0
+
 
 #include <iostream>
 using namespace std;
@@ -58,6 +60,28 @@ public:
         return this->length * this->width;
     }
 
+    Rectangle& setLength(int len)
+    {
+        length = len;
+        int k=3;
+        return *this;
+
+    }
+
+
+
+    Rectangle& setBreadth(int bre)
+    {
+                width =bre;
+                return *this;
+    }
+
+    int getArea()
+    {
+        return width*length;
+
+    }
+
     // Set dimensions using 'this' pointer
     void setDimensions(double length, double width) {
         this->length = length;
@@ -67,6 +91,23 @@ public:
 
 int main() {
     Rectangle rect(5.0, 3.0);
+    rect.setLength(4);
+    Rectangle &temp = rect.setBreadth(5);
+
+
+
+
+
+
+    int area = rect.setLength(3).setBreadth(4).getArea();
+    std::cout << area;
+
+
+
+
+
+/*
+
 
     cout << "Initial area: " << rect.calculateArea() << endl;
 
@@ -75,12 +116,13 @@ int main() {
 
     cout << "Updated area: " << rect.calculateArea() << endl;
 
+*/
     return 0;
 }
 
 
 
-#endif
+
 
 
 #if 0

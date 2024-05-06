@@ -6,8 +6,10 @@ using namespace std;
 int main()
 {
 
-    int &&x =23;
-    cout << x;
+   int k =23;
+   int &&x =23;
+ 
+   cout << x;
 
 
 

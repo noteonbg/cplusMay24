@@ -134,6 +134,11 @@ Medical equipment screens: Interfaces on devices like MRI machines, ECG monitors
 The IEC 62304 standard is globally recognized for managing the life cycle of medical device software. It covers everything from design and development to manufacturing, distribution, and post-market surveillance1. Specifically, it applies to two types of medical device software:
 
 
+--------------------------------------------------------------------------
+
+
+
+
 
 
 

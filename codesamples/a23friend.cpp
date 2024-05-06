@@ -22,7 +22,7 @@ public:
 };
 
 // Friend function definition
-void compareDevices(const MedicalDevice& device1, const MedicalDevice& device2) {
+static void compareDevices(const MedicalDevice& device1, const MedicalDevice& device2) {
     if (device1.deviceID == device2.deviceID) {
         std::cout << "Devices have the same ID." << std::endl;
     } else {

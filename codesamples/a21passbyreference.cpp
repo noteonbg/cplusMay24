@@ -1,4 +1,4 @@
-#if 0
+#if 1
 
 1. figure out how to write a MedicalDevice class.
 2. what all changes you need to do make this program work...

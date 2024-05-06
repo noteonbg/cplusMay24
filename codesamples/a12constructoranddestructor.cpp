@@ -10,6 +10,8 @@ private:
 
 public:
     // Constructor to initialize attributes
+    MedicalDevice(){}
+
     MedicalDevice(const string& name, const string& serial, int manufID)
         : deviceName(name), serialNumber(serial), manufacturerID(manufID) {
         cout << "MedicalDevice object created: " << deviceName << endl;
@@ -30,10 +32,23 @@ public:
 
 int main() {
     // Create a MedicalDevice object
-    MedicalDevice device("Blood Pressure Monitor", "BP12345", 1001);
-   // Display device details
-    device.displayDetails();
 
+   { 
+    MedicalDevice *x =new MedicalDevice("Blood Pressure Monitor", "BP12345", 1001);
+    delete x;
+    
+
+# if 0
+     MedicalDevice device("Blood Pressure Monitor", "BP12345", 1001);
+   // Display device details
+   
+    device.displayDetails();
+#endif
+    }
+
+
+
+    std::cout  << "ok in the main";
     // The destructor will be called automatically when 'device' goes out of scope
 
     return 0;
