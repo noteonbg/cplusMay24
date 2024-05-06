@@ -60,8 +60,8 @@ public:
 
     // Set dimensions using 'this' pointer
     void setDimensions(double length, double width) {
-        this->length = len;
-        this->width = wid;
+        this->length = length;
+        this->width = width;
     }
 };
 
