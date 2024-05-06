@@ -14,6 +14,13 @@ public:
         : deviceName(name), serialNumber(serial), manufacturerID(manufID) {}
 
     // Method to display device details
+    void changeMedicalDeviceDetails(const string& deviceName, const string& serialNumber, int manufacturerID)
+    {
+            
+                this->deviceName=deviceName;
+
+    }
+    
     void displayDetails() {
         cout << "Device Name: " << deviceName << endl;
         cout << "Serial Number: " << serialNumber << endl;
