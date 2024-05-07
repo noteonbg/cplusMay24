@@ -1,0 +1,238 @@
+day 2 notes..
+
+static 
+
+in what context are you using ...
+C
+means type of linkage...
+example i have a function which should not accessed outside the file.
+I make those functions as static...
+
+example 
+A.c
+i Have a function  called f1 in A.c
+B.c
+we have a function called f2 in B.c
+inside f2 i want to call f1, can I call answer is yes.
+but if you make f1 as static in A.c then you cannot.
+
+observe in this case we are not talking functions present inside the class.
+
+
+
+C++
+we see static function usage inside a class. then our oops theory kicks in..
+we have class called X. we have a function called f3 inside X. it is static.
+we want to call it, we dont need any object of class X.
+X::f3
+
+
+
+
+English into code.
+
+There is a class called X.
+somebody is telling I want to use the class X.
+this simply most of times only one thing.
+I want to access some function of class X. why.. theory tells class is for encapsulation.
+ok if it is a function what is the category of function
+static
+	classname.functionname
+non static
+	create an object and object.functionname.
+
+I am inside a static function of a class.
+1. you can access all static variables.
+2. there is no this.
+3. if you want to access non static variable, then you need to create an object.
+
+
+I am inside a non static function of a class
+1. you can access all variables present in the class, static and non static.
+2. you have access to this.
+3. you need an object to access this to function.
+4. remember constructor is non static.. so keep in mind while creating object.
+
+I want to create an object of class X, what do I do 
+look at constructor documentation of X.
+
+if you see a class with non static members, only then non static functions will make sense..
+
+
+Inheritance concept..
+why we do it
+1. maintenance
+2. runtime polymorphism.
+
+
+you have a base class it has got non static variables.
+you have a derived clss it has got non static variables.
+
+write a derive clss "is a " base class and read whther it sounds logical.
+
+we create objects of derived class and never of  base class because during
+hierarchy making only derived class exists in real life and not the base class things.
+
+what you want to prove.
+1. create a derived class object.
+2. prove it can access functions of the base class. + functions of the derived class.
+if you do 1 and 2, then we say "hello world inheritance is working"
+
+
+Benefit of inheritance.
+benefit 1)
+1. add a feature to the base class.
+2. make no changes to the derived class.
+3. all objects of derived class will now access the new feature added in the base class.
+
+Benefit 2) you can get it by using inheritance or by using interfaces.
+runtime polymorphism.. behavior depending on context.
+
+we are talking about behavior, we are talking about some hierarchy...
+
+class A // MedicalDevice, Process
+public:	
+	f1
+private:
+	 variables
+	
+//B diagnosticDevice  DaemonProcss
+class B :public A  // put is a test..
+{
+public:
+ 	f2
+	
+private:
+	variables
+}
+
+
+class C :public A  // put is a test..
+{
+public:
+ 	f3	
+private:
+	variables
+}
+
+
+
+C obj1 or B obj2 and never create object of A.
+obj1.f1
+obj1.f3
+
+or
+
+obj2.f1
+obj2.f2
+
+
+class A
+class B:public A
+class C:public B
+class D:public C
+
+if we create an object of D... we created a subclass object.
+this object of D should be able to access functions of C, B and A typically
+
+
+B obj1;// this is Derived class object of B.
+A obj2;//this is base class object.
+Here there is no dynamic allocation.. so things are peaceful.
+
+
+A *obj =new A();//this is sin any way because of new A() why base class object.
+A *obj =new B();// this may be a need.. when during runtime polymorphiosm.
+
+delete obj; will this cause problems answer depends.. especially if you have dyanamic allocation in any member of B.
+
+if we say P is  base class
+if we say Q is  derived class of P
+if a new function is added in P
+is any changes needed in Q
+no.. 
+
+
+Runtime polymorphism.
+for runtime polymorphism, there must some hierarchy...
+
+1. substitutability
+
+you can have a base class pointer, being assigned with a derived class object.
+
+A obj =new B();//sin in c++
+A obj;
+B obj1;
+obj = obj1; //another flavor of sin..
+
+
+if A class has got to 3 derived class, B, C and D
+A *obj =new D();//this is ok
+2. overriding.
+
+2. overriding.
+there is a function in the base class.
+derived class object feels that base class function is irrelevant or insufficient
+for it.
+so derived class tries to hide to the base class function....
+this is called as overriding.
+
+
+what is runtime polymorphism.
+
+1. base class pointer. ok relaxation reference , 
+2. using pointer or reference we are calling a virtual function.
+3. which function gets called depends on what is assigned to the pointer or reference
+this is called as runtime polymorphism.
+
+
+when we use runtime polymorphism thru the base class pointer you cannot
+access exclusive function of the derived class.
+
+
+x//Window *w =new Calcwindow;
+y//CalcWindow *c =new CalcWindow;
+
+
+Inheritance.
+1. maintenance aspect..
+2. runtime polymorphism.
+3. RTTI. Runtime Type Identification.. what is this, not preferred..
+
+thru base class pointer we cannot access exclusive functions of derived class.
+we have base class pointer beccuase we wanted runtime polymorphism.
+I want to access exclusive functions of the derived class.
+
+typecast the base class pointer to derived class pointer. but before doing
+it check what type of object the base class pointer is pointing to.
+
+
+x//Window *w =new Calcwindow;
+check whether w points to a calcwindow first..
+doing this is called as RTTI, syntax in c++ is dynamic_Cast.
+CalcWindow *c = (CalcWindow*)w;
+c->exclusiveFunctionofCalcuator();
+
+
+interface, what is it in oo, standard..
+
+standard..
+contract
+it is making your code future proof.
+loose coupling..
+
+how do you this in c++
+
+class Features
+{
+public:
+   virtual void feature1()=0;  //pure virtual function
+   virtual void feature2()=0;  //pure virtual functon
+
+};
+
+what is this, this is an interface in c++
+why are you not calling this as a class, I dont see any function which is callable
+inside this class.
+pure virtual function must be overridden 
+

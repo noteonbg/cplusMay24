@@ -1,0 +1,177 @@
+git@github.com:noteonbg/cplusMay24.git
+
+
+Pointer.
+
+
+1. where are we creating the pointer.
+2. what is pointer pointing to.
+3. what we are operating on the pointer or what the pointer is pointing to.
+
+collaboration is super important.
+
+1 and 3 are done by person X
+2 is done by person Y.
+
+
+
+
+
+
+
+
+static inside a class indicates.
+
+something which is independent of all objects and exists in the class
+because it is related to the class.
+
+this
+
+1. it is local pointer created automatically.
+2. inside non static functions of the class
+
+
+Rectangle r1;
+r1.setLength(3);
+r1.setBreadth(4);
+int area = r1.getArea();
+
+
+style of coding.
+
+
+int area = r1.setLengtn(3).setBreadth(4).getArea()
+
+
+you have  a class.
+we see a pointer member as a data
+we see dynamic memory allocation
+we see destructor in the class.
+that time consider copy constructor of your own.
+.. move operation..
+
+Default argument
+
+1. you have function input argument.
+2. you are giving a default value for it
+3. if you are calling the function and supplying a value, that value you supplied
+will be considered.
+4. in case you did not supply the value, default value will be considered.
+5. you have to give arguments from right to left.
+
+
+int main()
+{
+
+void (*x)(int) = nullptr;
+x=?;
+(*x)(3); //which ever function is assigned in the ? will get called operating on the pointer
+
+}
+
+
+void freak(void (*x)(int))
+{
+	(*x)(4);
+
+}
+
+
+x is a function pointer. 
+it can point to a function whose input is an int and return type is void.
+
+
+
+
+
+if you are returning by reference.. 
+
+1. check the reference is not pointing to a local variable.
+2. it is pointer also the same story applies.
+
+Friend functions..
+
+
+
+1. you must have a class.
+2. class must tell which function is its friend.
+3. this friend function is defined outside the class.
+4. this friend function can access all parts of the class including private parts.
+5. calling is done not thru an object, rather just functname();
+
+
+static variable
+1. indepdent of object.
+2. accessible if non public by classname::variablename.
+3. static function -- 
+cannot access non static parts of the class directly.
+access it by telling classname::functionname.
+no acess to this.
+
+
+
+const functions
+1. you must be inside the class.
+2. it is a non static function
+3. y ou cannot change any of content of the class inside a const function.
+unless the variables turns of mutable..
+
+Operator overloading.
+
+1. you must have a class.
+2  you create an object of the class.
+3. you use some operator with this class.
+example
+X is a class
+obj is an object
+
+obj > 3
+
+> symbol is a an operator..
+obj is an objectof a class which we have written today.
+compiler will no clue how to deal with it.
+so teach it.
+where to write the function
+1. inside the class.
+2. outside the class
+for most operators..
+but for some operator like = () it has to be written inside the class.
+
+
+Conversion function.
+1. we have two variables x and y.
+2. both of them belong to same data type or different data type.
+3. we are assigning.
+4. x and y belong to same data type.. ok overload = operator, if you see dynamic allocation
+in the class else be happy with compiler gives you.
+5. ok x and y belong to different types... 
+6. x we can control, y we dont.
+7.  x=y ok go to the class to which x belongs to and overload = operator with input
+argument as of type y.
+8. if you write y =x, remember y you dont control, then the option is come to x
+and overload the () operator.. and tell 
+operator y() and then return of the function should be of y type.
+
+
+
+
+
+how.
+
+1. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

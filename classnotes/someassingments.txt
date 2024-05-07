@@ -1,0 +1,148 @@
+1. simple calculator example
+
+
+2. We have a group of devices. which are characterized by deviceid, devicestatus and devicelocationid.
+	fillup this group with some devices.
+	. generate a menu as follows
+
+
+		1. start the App
+		0. exit
+		enter your choice.
+		
+		
+when start the app is selected by entering 1, ask for deviceid. if the deviceid is found, then show a menu as following.
+
+		1. update the devicei
+		2. view device details.
+		3. view device details based on status
+		4. view device details based on locationid.
+		5. back 
+		
+when 1 is selected ask for new devicestatus and devicelocation and update that alone
+when 2 is selected show the deviceid, device status and devicelocationid.
+when 3 is selected ask for status and shwo the devices based on the given status.
+when 4 is selected ask for locationid and show the device id and status based on the location.
+
+
+3. create an inheritance example as follows.
+Base class is characterized by.
+
+
+Inheritance, in the context of object-oriented programming (OOP), allows one class to inherit properties and behaviors from another class. Let's consider a simplified example:
+
+1. **Base Class: `MedicalDevice`**
+    - Represents common attributes shared by all medical devices.
+    - Contains properties like `device_name`, `manufacturer`, and `serial_number`.
+
+2. **Subclasses: `DiagnosticDevice` and `TherapeuticDevice`**
+    - These subclasses inherit from the `MedicalDevice` base class.
+
+### Example 1: Diagnostic Devices
+
+- **Base Class Properties (`MedicalDevice`):**
+    - `device_name`: The name of the device (e.g., "Blood Glucose Monitor").
+    - `manufacturer`: The company that produces the device.
+    - `serial_number`: A unique identifier for the device.
+
+- **Subclass (`DiagnosticDevice`):**
+    - Inherits properties from `MedicalDevice`.
+    - Adds specific properties related to diagnostic devices:
+        - `test_type`: The type of diagnostic test (e.g., blood glucose, cholesterol).
+        - `accuracy`: The accuracy level of test results.
+
+- **Example Instance: Blood Glucose Monitor**
+    - Inherits properties from both `MedicalDevice` and `DiagnosticDevice`.
+    - Specific properties:
+        - `device_name`: "Blood Glucose Monitor."
+        - `manufacturer`: "ABC Diagnostics."
+        - `serial_number`: "BG12345."
+        - `test_type`: "Blood Glucose."
+        - `accuracy`: "±5%."
+
+### Example 2: Therapeutic Devices
+
+- **Base Class Properties (`MedicalDevice`):**
+    - Same as before.
+
+- **Subclass (`TherapeuticDevice`):**
+    - Inherits properties from `MedicalDevice`.
+    - Adds specific properties related to therapeutic devices:
+        - `therapy_type`: The type of therapy provided (e.g., insulin delivery, pain management).
+        - `dose_range`: The range of therapeutic doses.
+
+- **Example Instance: Insulin Pump**
+    - Inherits properties from both `MedicalDevice` and `TherapeuticDevice`.
+    - Specific properties:
+        - `device_name`: "Insulin Pump."
+        - `manufacturer`: "XYZ Medical."
+        - `serial_number`: "IP7890."
+        - `therapy_type`: "Insulin Delivery."
+        - `dose_range`: "1–100 units."
+
+### Summary
+
+In this example:
+- `DiagnosticDevice` and `TherapeuticDevice` inherit properties (like `device_name` and `manufacturer`) from `MedicalDevice`.
+- Each subclass can add specific properties relevant to its purpose (e.g., `test_type` for diagnostics, `therapy_type` for therapeutics).
+
+assingment 4
+
+
+Certainly! Inheritance is a fundamental concept in object-oriented programming (OOP) that allows one class (the **child class** or **subclass**) to inherit properties and behaviors from another class (the **parent class** or **superclass**). Let's explore an example related to the medical domain.
+
+Consider a simplified scenario where we want to model different types of medical professionals. We'll create a basic inheritance hierarchy:
+
+1. **Person**: This will be our base class representing common attributes shared by all individuals, including medical professionals.
+2. **MedicalProfessional**: A subclass of `Person`, representing professionals working in the medical field.
+3. **Doctor**: A further specialization of `MedicalProfessional`, specifically for doctors.
+4. **Nurse**: Another specialization of `MedicalProfessional`, specifically for nurses.
+
+Here's how we can define these classes in Python:
+
+
+class Person:
+name and age
+
+class MedicalProfessional :public Person:
+	Specialization
+	
+class Doctor :MedicalProfessional
+		Degree attribute
+		
+		
+class Nurse:Medical Professional.
+    experienceyears
+    eample usage:
+	
+	
+doctor_abc = new Doctor(name="A", age=35, specialization="Cardiology", degree="MD")
+nurse_def = new Nurse(name="B", age=28, specialization="Pediatrics", experience_years=7)
+
+
+5. come with your own example.
+
+6.
+In all the above classes which you feel is relevant overload the == operator and > and < operator.
+
+
+7. Interface example
+Medical equipment screens: Interfaces on devices like MRI machines, ECG monitors, and ventilators.
+
+
+8. have a look at 
+The IEC 62304 standard is globally recognized for managing the life cycle of medical device software. It covers everything from design and development to manufacturing, distribution, and post-market surveillance1. Specifically, it applies to two types of medical device software:
+
+
+--------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
