@@ -19,7 +19,7 @@ int b(6.6);
 
 //int c{7.3}; //Description: Similar to copy initialization, but uses curly braces
 
-int d ={8};
+int d ={8.8};
 
 int x={};
 std::cout  << "x" << x;
@@ -28,7 +28,7 @@ return 0;
 }
 
 
-#if 0
+#if 1
 
 #include <iostream>
 #include <string>

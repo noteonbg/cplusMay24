@@ -3962,7 +3962,7 @@ some c++ 17 features.
 
 
 c++ 20 features
-Certainly! **C++20** introduced several new features and improvements to the C++ programming language. Here are some of the key features:
+**C++20** introduced several new features and improvements to the C++ programming language. Here are some of the key features:
 
 1. **Concepts Library**:
     - Concepts allow you to specify constraints on template parameters.

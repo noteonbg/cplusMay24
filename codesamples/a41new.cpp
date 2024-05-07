@@ -1,7 +1,25 @@
 #include <iostream>
 #include <new>  // Include the new header for std::bad_alloc
 
-int main() {
+
+
+
+   
+#include <new.h>
+
+int handle_program_memory_depletion( size_t )
+{
+   // Your code
+}
+
+int main( void )
+{
+   std::set_new_handler(  );
+   int *pi = new int[2];
+}
+
+
+int main1() {
     try {
         // Allocate memory for an array of 100 integers
         int* myArray = new int[100];

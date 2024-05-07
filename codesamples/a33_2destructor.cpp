@@ -7,7 +7,7 @@ public:
     }
 
     // Virtual destructor
-    virtual ~Base() {
+     virtual ~Base() {
         std::cout << "Destructing base\n";
     }
 };
@@ -24,8 +24,9 @@ public:
 };
 
 int main() {
-    Derived* d = new Derived();
-    Base* b = d;
+    
+    Base* b = new Derived;
+    //runtme polymorphism
     delete b; // Properly destructs both base and derived objects
     return 0;
 }

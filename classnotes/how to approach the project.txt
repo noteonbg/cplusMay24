@@ -1,0 +1,51 @@
+vasu.lv@gmail.com
+9945276588
+
+
+
+
+1. what will project have.. some h files and some .cpp files.
+2. if we dont architecture noting can be done.
+3. class
+4. member variables,  member functions.==data type.
+5. see in the class are you seeing any dynamic allocation.
+if yes how..? ***
+6. look for destructor.
+7. look for operator overloading or friend functions.
+8. look for any datastructure usage..find out what operations they have done.
+10. look for inheritance and virtual functions.
+11. look for static functions and static variables if any**
+12. look at namespace usage.
+------------------------------------------------------
+Function definitions.
+
+1. non static function calls.
+2. global function calls
+3. static function call.
+4.how is it passed by reference, by pointer or by value.
+5 when I see value, i want to see move operations are done...
+-------------------------------------------------------------
+stage 3
+
+1. templates.
+2. runtime polymorphic dynamic cast.
+3. uncertainties
+---------------------------------------------
+stage 4
+environment point of view.
+
+1. what kind of libraries static or non static.
+2. what kind of tools are used to analyze the code.
+3. some idea regarding build tool (1/5)
+
+
+
+
+
+
+
+
+
+
+
+

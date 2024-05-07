@@ -7,6 +7,12 @@ protected:
     int a;
 
 public:
+
+    Parent()
+    {
+        cout << "Parent class constructor without arguments";
+    }
+
     Parent(int x) : a(x) {
         cout << "Parent constructor called" << endl;
     }
@@ -22,7 +28,10 @@ private:
     int b;
 
 public:
-    Child(int x, int y) : Parent(x), b(y) {
+
+    Child()  { cout << "child class no argument constructor";}
+
+    Child(int x, int y) : Parent(x),b(y) {
         cout << "Child constructor called" << endl;
     }
 

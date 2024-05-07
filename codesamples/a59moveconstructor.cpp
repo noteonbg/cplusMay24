@@ -5,8 +5,16 @@ private:
   int* data;
 public:
   MyClass() {
+
+    std::cout << "object is getting created";
     data = new int;
     *data = 0;
+  }
+
+  MyClass(const MyClass &temp)
+  {
+      std::cout <<"copy constructor";
+
   }
 
   MyClass(MyClass&& other) {
@@ -14,6 +22,7 @@ public:
     data = other.data;
     // Set the other object's data to nullptr.
     other.data = nullptr;
+    std::cout  << "move constructor";
   }
 
   MyClass& operator=(MyClass&& other)
@@ -31,16 +40,16 @@ public:
   }
 
   void print() {
-    std::cout << *data << std::endl;
+    std::cout <<  "how to waste time" << *data << std::endl;
   }
 };
 
 int main() {
   MyClass obj1;
-  MyClass obj2(std::move(obj1));
+  MyClass obj2((MyClass&&)obj1);
 
   // obj1 now has an empty string, while obj2 has a default string.
-  obj1.print(); // Prints 0
+ // obj1.print(); // Prints 0
   obj2.print(); // Prints 0
 
   return 0;

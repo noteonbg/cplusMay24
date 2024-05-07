@@ -29,16 +29,16 @@ private:
 int main() {
     // Create a const Patient object
     const Patient constPatient("Alice", 30);
+    const int i=3;
 
     // Using const_cast to modify a const object
     Patient* nonConstPatient = const_cast<Patient*>(&constPatient);
     nonConstPatient->setAge(31);  // Modifying the age
 
-#if 0
+
     // Using reinterpret_cast to reinterpret the address
     int* agePointer = reinterpret_cast<int*>(&constPatient);
     std::cout << "Reinterpreted age: " << *agePointer << std::endl;
-#endif
     // Using static_cast to convert between related types
     Patient* anotherPatient = new Patient("Bob", 25);
     const Patient* constPtr = static_cast<const Patient*>(anotherPatient);

@@ -53,10 +53,11 @@ Program 3.. save Program3.cpp as Program4.cpp
 
 look at a31conversionfunction.cpp
 
-in the main function , 
-write conversion functions in Person class to ensure below two lines work
-in the code.
 
+write conversion functions in Person class 
+
+in the main function , to ensure below two lines work
+in the code.
 Person p =23;// should set the age.
 int age = p;// now x should have the age of the person.
 
@@ -73,12 +74,11 @@ Adds specific properties related to diagnostic devices:
         - `accuracy`: The accuracy level of test results
 example
 Example Instance: Blood Glucose Monitor**
-    - Inherits properties from both `MedicalDevice` and `DiagnosticDevice`.
-    - Specific properties:
+    - - Specific properties:
         - `device_name`: "Blood Glucose Monitor."
         - `manufacturer`: "ABC Diagnostics."
         - `serial_number`: "BG12345."
-        - `test_type`: "Blood Glucose."
+        - `test type`: "Blood Glucose."
         - `accuracy`: "±5%."
 
 subclass (`TherapeuticDevice`):
@@ -106,7 +106,10 @@ think what all functions to write in the derived classes.
 --------------------------------------------------------------------------------------
 
 
-Program 5   -- Look at inheritance.cpp
+Program 5   -- 
+
+Look at a33inheritance.cpp
+
 
 save program4.cpp as Program5.cpp
 
@@ -119,6 +122,11 @@ in the same program demonstrate RTTI. example after doing runtime polymorphism
 in case you have a DiagnosticDevice show you can call the exclusive
 function of DiagnosticDevice which shows 
 
+in the same program demonstrate RTTI. example after doing runtime polymorphism
+in case you have a DiagnosticDevice show you can call the exclusive
+function of DiagnosticDevice which shows test_type
+
+
 
 ----------------------------------------------------------------------------------------
 
@@ -130,10 +138,6 @@ we want to use the MedicalDevice class a baseclass.
 create have subclasses called DiagnosticDevice and TherapeuticDevice
 create a function called display in MedicalDevice which is pure virtual
 and demonstrate runtime polymorphism.
-
-in the same program demonstrate RTTI. example after doing runtime polymorphism
-in case you have a DiagnosticDevice show you can call the exclusive
-function of DiagnosticDevice which shows test_type
 
 ensure you allocate memory for serialNumber in medicaldevice dynamically.
 write a destructor in medicaldevice.

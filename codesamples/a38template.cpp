@@ -1,6 +1,8 @@
 #include <iostream>
 #include <iomanip>
 
+
+#if 0
 // Medical domain namespace
 namespace MedicalDomain {
 
@@ -8,12 +10,22 @@ namespace MedicalDomain {
     template <typename T>
     T calculateBMI(T weight, T height) {
         // BMI formula: weight (kg) / (height (m))^2
-        return weight / (height * height);
+        std::cout <<"ok templates function at work"
+        return weight;
+        //return weight / (height * height);
     }
 
 }  // End of namespace MedicalDomain
 
 int main() {
+
+    char c = MedicalDomain::calculateBMI('a','b'); // template is instantiated.
+    double d = MedicalDomain::calculateBMI(2.3,4.4);
+
+
+
+
+    #if 0
     // Example usage
     double weightKg = 70.0;  // Weight in kilograms
     double heightMeters = 1.75;  // Height in meters
@@ -24,5 +36,8 @@ int main() {
     // Display the result
     std::cout << "Patient's BMI: " << std::fixed << std::setprecision(2) << bmi << std::endl;
 
+    #endif
     return 0;
 }
+
+#endif

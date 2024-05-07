@@ -30,10 +30,29 @@ public:
     }
 };
 
-int main() {
+int main1() {
     // Example usage
+    /*
+        you write a new derived class and in the main function you hvae to demonstrate
+        runtime polymorphism.
+    
+    */
     BloodPressureMonitor bpm("BP12345", "ABC Medical", "BP Pro");
     bpm.displayInfo();
 
+    return 0;
+}
+
+#include <time.h>
+
+int main()
+{
+    srand(time(0));
+
+    for(int i=0; i <5; i++)
+    {
+    int x = (rand()%10);
+    std::cout << x <<"\n";
+}
     return 0;
 }

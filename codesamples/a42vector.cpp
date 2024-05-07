@@ -41,6 +41,17 @@ int main() {
     // Modify the serial number of the thermometer
     deviceList[1].setSerialNumber("T12345");  // New serial number
 
+
+
+
+
+
+
+
+
+
+    
+
     // Display the updated devices
     std::cout << "Updated Medical Devices in the Hospital:" << std::endl;
     for (const auto& device : deviceList) {

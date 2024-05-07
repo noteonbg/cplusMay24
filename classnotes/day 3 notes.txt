@@ -155,10 +155,7 @@ operator y() and then return of the function should be of y type.
 
 
 
-
-how.
-
-1. 
+ 
 
 
 

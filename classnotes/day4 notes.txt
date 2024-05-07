@@ -1,0 +1,206 @@
+when we create 
+
+1. derived class, object usually the base class constructor
+gets called and then the derived class constructor... 
+this statement is true, which derived class constructor
+in case derived class has overloaded constructors.
+then which base class constructor gets called, usually
+the no argument constructor will get called.
+
+if the  base class has got parametrized constructor it will
+never called automatically during derived class object creation
+programmer need to call it explicitly in the derived class constructor.
+
+
+base class desdtructor needs to be virtual because.
+if we create derived class object dynamically
+when we are moving the derived class object.
+only destructor of base class will get called. 
+which is logical problem.
+so to avoid this make the destructor of base class virtual.
+this will guarantee.. that when the derived class object
+is removed from memory..
+1. derived destructor gets called first.
+2. base class destructor gets called.
+
+
+
+
+correct logic for runtime polymorphism.
+
+1. i have a base class pointer.
+2. I dont know which derived class I amy get.
+3. using the base class ptr i will call the vritual function.
+
+
+
+baseclassptr *basePtr =nullptr;
+int i = generate a random between 1 and 10.
+if ( i <5)
+	baseclassptr  = new DerivedClass1; //fulfill which construor
+else 
+       baseClassPtr =new DerivedClass2;
+
+baseClassPtr->virtualfunction();
+delete baseclassptr.
+
+
+
+protected.
+
+1. we have inheritance.
+2. if you make variable in base class as protected.
+3. inside the derived classes we can access the variable directly.
+
+
+
+
+int i=3;
+float f=33.3f;
+i = (int)f;
+
+type of casting
+const cast.
+
+1. you have  const variable.
+2. you want to remove constness of this ok think of using the const cast.
+
+if you want two types x and y and they are not compatible..
+but still  you want to cast..
+
+
+Exception handling
+1. focus on the function.
+2. we see lines of code in the function
+3. lines of code.
+3.1 statement   will it causes trouble you should know theory
+3.2 function calls . you should open documentation.
+4. when a runtime error happens is it a dead scenario or injured scenario.
+5. kids think they can solve all problems adults know they cant.
+so know context of the problem.
+
+Exception handling
+Templates.
+copy paste some assingments 
+move operation
+STL
+how to approach a c++ project.
+
+
+
+
+1. which function is executing.
+2. when is exception getting created.
+3. where it is being handled.
+4. you got lot of inbuilt exception classes, use it if need is there.
+
+dynamic memory fails what i can do.
+
+1. handle the badalloc exception
+or
+2. set a function that will h andle the new failure
+by using the function set_new_handler
+
+
+Templates
+
+1.  you want to write functions or classes in data type independent way.
+2. we have to create the function or the class.
+3. call the function with different data types.. instiating the template.
+
+
+
+
+
+Templates.
+
+1. template function input argument data type independent.
+2. template class -- data operation data type independent
+
+Lamda .
+1. from a project point of view, zero implications.
+2. style of coding..
+3. what is benefit lamda simple we can reduces lines of code..
+4. when does lamda .. only function calling.
+
+Lamda 
+
+how to understand
+
+1. two persons are there X and Y
+
+X has written a function f1, whose input argument is another function.
+which will get called under some particular circumsntance.
+
+Person Y is interested in the function f1.
+now to call f1, he needs to pass another function.
+this another function Y will create it via lamda syntax.
+
+f1(lamdafunction);
+
+copy paste 1 template function, 1 template class.
+copy paste 2 lamda expression .
+
+
+
+person X
+
+function definition
+
+void f1(function pointer)
+{
+
+}
+
+
+f1(lamdaexpression)
+
+
+
+
+
+smart pointer
+1. shared pointer, if we are sharing pointers
+2. single use case unique ptr..
+
+header file
+header implementation file.
+main.cpp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

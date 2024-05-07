@@ -30,12 +30,41 @@ namespace MedicalDomain {
             std::cout << "Device Name: " << name_ << std::endl;
         }
     };
+
+
+    void freak()
+    {
+        std::cout<< "freak function at work";
+    }
 }  // End of namespace MedicalDomain
+
+namespace junk
+{
+    void freak()
+    {
+        std::cout<< "freak function at work";
+    }
+
+}
+
+namespace junk
+{
+        void f1() {}
+
+
+}
 
 int main() {
     // Example usage within the namespace
-    MedicalDomain::BloodPressureMonitor bpm("BP12345", "ABC Medical", "BP Pro");
-    bpm.displayInfo();
 
+    using namespace MedicalDomain;
+    using namespace junk;
+
+    
+
+    BloodPressureMonitor bpm("BP12345", "ABC Medical", "BP Pro");
+    bpm.displayInfo();
+    junk::freak();
+    junk::f1();
     return 0;
 }
