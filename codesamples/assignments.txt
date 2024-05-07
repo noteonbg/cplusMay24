@@ -1,0 +1,361 @@
+program 1 -- Keep the file name as program1.cpp
+
+1. create a hello world program, compile and run it.
+
+--------------------------------------------------------------------
+Program 2 -- keep the file name  as program2.cpp
+Look at a03classexample.cpp and generate a class called Person with
+the following attributes.. name of type string, age of int,address which is of type
+string and ensure methods are written for assigning values to all these attributes
+write 2 constructors.
+
+ write a main function create an 2 objects of this class,each one object using
+one of the constructor and call the functions present in the class.
+ 
+Look at a06passbyrefernce.cpp, and a21passbyreference.cpp
+write a a function called changePersonDetails whose input argument is 
+int age,string address passed by refernce, this should change the object
+age and address.
+
+Look at a09pointertoobject.cpp, and a21passbyreference.cpp
+write a a function called printPersonDetails whose input argument is 
+Person pointer type, this should print all the person details like
+age, name and address.
+
+Look at a23friend.cpp 
+In the person class , add a friend function similar to a23friend.cpp for comparing
+two person objects comparison should be based on age . create a new function
+called testfriend outside the class and in that call the friend function.
+and then call testfriend function from the main function.
+
+Look at a25constfunctions.cpp
+add const keyword at necessary functions and variables. if need be..
+
+--------------------------------------------------------
+Program 3.. save Program2.cpp as Program3.cpp
+
+look at a12constructoranddestructor.cpp
+
+In the person class, ensure the member age is dynamically allocated.
+and ensure a destructor is written to deallocate memory. in the main
+function create the person object and check whether destructor is getting called.
+remember person object is not on heap.
+
+write a copy constructor in the Person class. look at  a18copyconstructor.cpp
+
+overload the assignment operator, >,< and == operators look at a27operatoroverloading.cpp
+and a28assingmentoperator.cpp. > and < is based on age comparison on person
+and == should compare all the attributes ie name, age and address.
+
+--------------------------------------------------------------------------------
+
+Program 3.. save Program3.cpp as Program4.cpp
+
+look at a31conversionfunction.cpp
+
+in the main function , 
+write conversion functions in Person class to ensure below two lines work
+in the code.
+
+Person p =23;// should set the age.
+int age = p;// now x should have the age of the person.
+
+---------------------------------------------------------------------------------------------
+
+Program 4   -- Look at inheritance.cpp
+
+save a18copyconstructor.cpp as Program4.cpp
+
+we want to use the MedicalDevice class a baseclass.
+create two subclasses called DiagnosticDevice and TherapeuticDevice
+Adds specific properties related to diagnostic devices:
+        - `test_type`: The type of diagnostic test (e.g., blood glucose, cholesterol).
+        - `accuracy`: The accuracy level of test results
+example
+Example Instance: Blood Glucose Monitor**
+    - Inherits properties from both `MedicalDevice` and `DiagnosticDevice`.
+    - Specific properties:
+        - `device_name`: "Blood Glucose Monitor."
+        - `manufacturer`: "ABC Diagnostics."
+        - `serial_number`: "BG12345."
+        - `test_type`: "Blood Glucose."
+        - `accuracy`: "±5%."
+
+subclass (`TherapeuticDevice`):
+    - Inherits properties from `MedicalDevice`.
+    - Adds specific properties related to therapeutic devices:
+        - `therapy_type`: The type of therapy provided (e.g., insulin delivery, pain management).
+        - `dose_range`: The range of therapeutic doses.
+
+- Example Instance: Insulin Pump
+    - .
+    - Specific properties:
+        - `device_name`: "Insulin Pump."
+        - `manufacturer`: "XYZ Medical."
+        - `serial_number`: "IP7890."
+        - `therapy_type`: "Insulin Delivery."
+        - `dose_range`: "1–100 units."
+
+think what all functions to write in the derived classes.
+
+1. create objects of DiagnosticDevice and  TherapeuticDevice
+2. with object of DiagnostiDevice call the functions of both MedialDevice and DiagnosticDevice
+3. with object of TherapeuticDevice call the functions of both MedialDevice and TherapeuticDevice
+
+
+--------------------------------------------------------------------------------------
+
+
+Program 5   -- Look at inheritance.cpp
+
+save program4.cpp as Program5.cpp
+
+we want to use the MedicalDevice class a baseclass.
+create have subclasses called DiagnosticDevice and TherapeuticDevice
+create a function called display in MedicalDevice which is pure virtual
+and demonstrate runtime polymorphism.
+
+in the same program demonstrate RTTI. example after doing runtime polymorphism
+in case you have a DiagnosticDevice show you can call the exclusive
+function of DiagnosticDevice which shows 
+
+
+----------------------------------------------------------------------------------------
+
+Program 6
+
+save program5.cpp as Program6.cpp
+
+we want to use the MedicalDevice class a baseclass.
+create have subclasses called DiagnosticDevice and TherapeuticDevice
+create a function called display in MedicalDevice which is pure virtual
+and demonstrate runtime polymorphism.
+
+in the same program demonstrate RTTI. example after doing runtime polymorphism
+in case you have a DiagnosticDevice show you can call the exclusive
+function of DiagnosticDevice which shows test_type
+
+ensure you allocate memory for serialNumber in medicaldevice dynamically.
+write a destructor in medicaldevice.
+
+ensure you allocate memory for testtype dynamically in DiagnosticDevice
+write a destructor.
+
+ensure you allocate memory for dose_range dynamically in TherapeuticDevice
+write  destructor.
+
+now in the main function.
+
+1. we already have runtime polymorphism.
+2. demonstrate why you need virtual Destructor in the MedicalDevice class.
+
+-------------------------------------------------------------------------------
+
+program 7
+
+a39templateclass
+
+keep your file name as program7.cpp
+
+look at 18copyconstructor.cpp , you will see MedicalDevice class currently
+serialNumber is a string.  ensure it is templatized to take any datatype.
+
+----------------------------------------------------------------------------------
+
+
+Program 8 
+
+look at a40exception.cpp
+
+
+save program2.cpp as program8.cpp, you will see a function called
+changePersonDetails, now if the age input is given as negative throw an exception
+and handle the exception at the calling place.
+
+---------------------------------------------------------------------------
+
+Program 9
+
+look at a37namespace.cpp
+save program8.cpp as program9.cpp
+ensure person class is put in the namespace as medicaldomain.
+and ensure you make necessary changes for the code to work
+
+-----------------------------------------------------------------------------
+
+Program 10
+
+Look at a43vector.cpp
+
+save Program9.cpp as Program10.cpp
+
+create a vector which contains person class objects.
+show all elements in the vector.
+show to find a particular element in the vector.
+
+---------------------------------------------------------------------
+Program 11
+
+Look at a47mapexample.cpp
+
+save Program10.cpp as Program11.cpp
+
+create a Map which contains key as person name and value as Person object.
+key data type is string and value data type is person
+add some elements to the Map.
+show how to get person detail if a given name is given.
+print all the contents of the Map
+
+
+----------------------------------------------------------------------------------
+
+Program 12.
+
+save program9 as Program12.cpp
+move the code into a header file, implementation file and main.cpp think how to do it.
+
+---------------------------------------------------------------------------------
+
+Program 13.
+
+Save program 12.cpp as Program 13.cpp
+
+a55sharedptr.cpp
+
+ensure your person object in the main is dynamically allocated using shared pointer.
+and try the same program without using shared ptr and write a comment in the code
+what will happen.
+
+
+------------------------------------------------------------------------------------
+
+Program 14
+
+. We have a group of Devices. which are characterized by deviceid, devicestatus and devicelocationid. fillup this group with some devices objects.
+	. show  a menu as follows
+		 Menu 1
+
+		1. start the App
+		0. exit
+		enter your choice.
+		
+		
+when start the app is selected by entering 1, ask for deviceid. if the deviceid is found in the group we created, then show a menu as following.
+
+		Menu 2		
+
+		1. update the device
+		2. view device details.
+		3. view device details based on status
+		4. view device details based on locationid.
+		5. back 
+
+in case deviceid is not found in the group, ask for deviceid, devicestatus and location
+add that to the group provided deviceid is not found. then come back to the menu 1.
+
+for Menu2 , the functionality is as below
+	
+when 1 is selected ask for new devicestatus and devicelocation and update that alone
+when 2 is selected show the deviceid, device status and devicelocationid.
+when 3 is selected ask for status and shwo the devices based on the given status.
+when 4 is selected ask for locationid and show the device id and status based on the location.
+
+--------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Program 3.
+
+
