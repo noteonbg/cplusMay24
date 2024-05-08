@@ -25,7 +25,6 @@ is removed from memory..
 
 
 
-
 correct logic for runtime polymorphism.
 
 1. i have a base class pointer.
@@ -51,7 +50,6 @@ protected.
 1. we have inheritance.
 2. if you make variable in base class as protected.
 3. inside the derived classes we can access the variable directly.
-
 
 
 
@@ -88,7 +86,6 @@ how to approach a c++ project.
 
 
 
-
 1. which function is executing.
 2. when is exception getting created.
 3. where it is being handled.
@@ -104,11 +101,9 @@ by using the function set_new_handler
 
 Templates
 
-1.  you want to write functions or classes in data type independent way.
+1. you want to write functions or classes in data type independent way.
 2. we have to create the function or the class.
 3. call the function with different data types.. instiating the template.
-
-
 
 
 
@@ -142,7 +137,6 @@ copy paste 1 template function, 1 template class.
 copy paste 2 lamda expression .
 
 
-
 person X
 
 function definition
@@ -157,8 +151,6 @@ f1(lamdaexpression)
 
 
 
-
-
 smart pointer
 1. shared pointer, if we are sharing pointers
 2. single use case unique ptr..
@@ -166,41 +158,3 @@ smart pointer
 header file
 header implementation file.
 main.cpp
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,6 @@
-git@github.com:noteonbg/cplusMay24.git
 
 
 Pointer.
-
 
 1. where are we creating the pointer.
 2. what is pointer pointing to.
@@ -12,12 +10,6 @@ collaboration is super important.
 
 1 and 3 are done by person X
 2 is done by person Y.
-
-
-
-
-
-
 
 
 static inside a class indicates.
@@ -151,24 +143,6 @@ argument as of type y.
 8. if you write y =x, remember y you dont control, then the option is come to x
 and overload the () operator.. and tell 
 operator y() and then return of the function should be of y type.
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
