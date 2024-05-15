@@ -1,0 +1,6 @@
+Constant function, mutation, polymorphism, inlne functions (day 3 topics)
+inheritance, run time polymorphism
+STL
+Using Pointers to objects
+References – Lvalue & Rvalue
+Passing references to objects
